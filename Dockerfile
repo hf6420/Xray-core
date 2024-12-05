@@ -23,6 +23,8 @@ COPY --from=build --chmod=755 /src/xray /usr/bin/xray
 USER root
 WORKDIR /root
 
+RUN apk add --no-cache tzdata ca-certificates
+
 ENV TZ=Asia/Shanghai
 
 VOLUME /etc/xray
