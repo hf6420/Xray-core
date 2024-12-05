@@ -30,3 +30,6 @@ ENV TZ=Asia/Shanghai
 VOLUME /etc/xray
 ENTRYPOINT [ "/usr/bin/xray" ]
 CMD [ "-config", "/etc/xray/config.json" ]
+
+
+#docker run --name reality --restart=unless-stopped --network=host -v /root/xray/reality.json:/etc/xray/config.json -v /usr/share/zoneinfo/Asia/Shanghai:/etc/localtime -d xray
